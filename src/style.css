@@ -32,3 +32,29 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Main Content */
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    padding: 50px;
+    background: #f1d0a2
+}
+
+#hero-content h1 {
+    font-size: 4rem;
+    color: #1c0808;
+}
+
+#hero-content p {
+    font-weight:300;
+    font-size: 2rem;
+    color: #840f0f;
+}
+
+#content img {
+    width: 100%;
+    height: auto;
+}
