@@ -1,28 +1,31 @@
 import "./style.css";
 import { loadHeaderContent } from "./header";
 import { loadHomeContent } from "./home";
+import { loadAboutContent } from "./about";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeaderContent();
     loadHomeContent();
+    setLayoutClass("home-layout");
 
-    const home = document.querySelector("#home");
-    home.addEventListener("click", () => {
-    loadHeaderContent();
-    loadHomeContent();
-    });
-
-    const menu = document.querySelector("#menu");
-    menu.addEventListener("click", () => {
-        loadHeaderContent();
-        loadMenuContent();
-    });
-
-    const about = document.querySelector("#about");
-    about.addEventListener("click", () => {
-        loadHeaderContent();
-        loadAboutContent();
+    document.querySelector("header").addEventListener("click", (event) => {
+        if (event.target.id === "home") {
+            loadHomeContent();
+            setLayoutClass("home-layout");
+        } else if (event.target.id === "menu") {
+            loadMenuContent();
+            setLayoutClass("menu-layout");
+        } else if (event.target.id === "about") {
+            loadAboutContent();
+            setLayoutClass("about-layout");
+        }
     });
 
 });
+
+function setLayoutClass(layoutClass) {
+    const content = document.querySelector("#content");
+    content.className = "";
+    content.classList.add(layoutClass);
+};
 
