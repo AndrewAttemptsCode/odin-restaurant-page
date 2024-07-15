@@ -7,9 +7,9 @@ export function loadHeaderContent() {
                 <img src="${pizzaLogo}" alt="Pizza logo">
         </div>
             <nav>
-                <button>Home</button>
-                <button>Menu</button>
-                <button>About</button>
+                <button id="home">Home</button>
+                <button id="menu">Menu</button>
+                <button id="about">About</button>
             </nav>    
     `;    
 }
