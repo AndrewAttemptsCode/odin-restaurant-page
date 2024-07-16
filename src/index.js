@@ -2,6 +2,7 @@ import "./style.css";
 import { loadHeaderContent } from "./header";
 import { loadHomeContent } from "./home";
 import { loadAboutContent } from "./about";
+import {loadMenuContent} from "./menu";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeaderContent();
