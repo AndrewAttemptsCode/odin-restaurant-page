@@ -26,11 +26,16 @@ export function loadMenuContent() {
         createFood("Create Your Own", "Go Freestyle! Simply choose your sauce and add any toppings", 12.99, cyoImage),
     ];
 
+    const menuTitle = document.createElement("h1");
+    menuTitle.textContent = "Menu";
+
+    content.appendChild(menuTitle);
+
     foodItems.forEach(item => {
         const menuItem = document.createElement("div");
         menuItem.classList.add("food-item");
 
-        const foodTitle = document.createElement("h2");
+        const foodTitle = document.createElement("h3");
         foodTitle.classList.add("food-title");
         foodTitle.textContent = item.name;
 
@@ -47,10 +52,14 @@ export function loadMenuContent() {
         foodImg.src = item.imagePath;
         foodImg.alt = `${item.name} pizza`;
 
+        const foodInfo = document.createElement("div");
+        foodInfo.classList.add("food-info");
+
         menuItem.appendChild(foodImg);
-        menuItem.appendChild(foodTitle);
-        menuItem.appendChild(foodDesc);
-        menuItem.appendChild(foodPrice);
+        menuItem.appendChild(foodInfo);
+        foodInfo.appendChild(foodTitle);
+        foodInfo.appendChild(foodDesc);
+        foodInfo.appendChild(foodPrice);
 
         menu.appendChild(menuItem);
     });
