@@ -82,6 +82,8 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #f1d0a2;
     line-height: 1.2;
     margin: 0;
+
+    filter: drop-shadow(0 8px 8px rgba(199, 12, 12, 0.884));
 }
 
 .hero-title-1 {
@@ -141,6 +143,8 @@ p, h1, h2, h3, h4, h5, h6 {
     background: #b4232344;
     padding: 40px;
     border-radius: 10px;
+
+    filter: drop-shadow(0 8px 8px rgba(226, 43, 43, 0.377));
 }
 
 .about-container div:nth-child(even) {
