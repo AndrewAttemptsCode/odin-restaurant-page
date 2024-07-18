@@ -210,6 +210,13 @@ p, h1, h2, h3, h4, h5, h6 {
 .food-item {
     width: 251px;
     background: whitesmoke;
+    border-radius: 10px;
+
+    transition: filter 0.3s ease;
+}
+
+.food-item:hover {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .food-info {
