@@ -245,6 +245,10 @@ nav button {
     color: #f1d0a2;
 }
 
+nav button:hover {
+    color: #f3ac49;
+}
+
 .logo {
     position: absolute;
     top: 0;
