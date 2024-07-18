@@ -8,10 +8,16 @@ export function loadHeaderContent() {
     logoContainer.classList.add("logo");
     header.appendChild(logoContainer);
 
+    const logoLink = document.createElement("a");
+    logoLink.href = "https://github.com/AndrewAttemptsCode/odin-restaurant-page/tree/main";
+    logoLink.target = "_blank";
+    logoLink.rel = "noopener noreferrer";
+    logoContainer.appendChild(logoLink);
+
     const logo = document.createElement("img");
     logo.src = pizzaLogo;
     logo.alt = "Pizza Logo";
-    logoContainer.appendChild(logo);
+    logoLink.appendChild(logo);
 
     const navBar = document.createElement("nav");
     header.appendChild(navBar);
